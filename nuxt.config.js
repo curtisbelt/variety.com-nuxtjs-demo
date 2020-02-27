@@ -15,7 +15,7 @@ export default {
 
   plugins: [],
 
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios', '@nuxtjs/apollo'],
 
   buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
 
@@ -29,5 +29,15 @@ export default {
     parallel: isDev,
     cache: isDev,
     hardSource: isDev
+  },
+
+  apollo: {
+    includeNodeModules: true, // In case you use *.gql files inside of node_module folder you can enable the graphql-tag/loader to parse the files for you.
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'http://variety.variety.localhost/graphql',
+        persisting: true // https://www.apollographql.com/docs/apollo-server/performance/apq/
+      }
+    }
   }
 }
