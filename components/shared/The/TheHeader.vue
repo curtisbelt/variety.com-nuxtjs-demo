@@ -1,11 +1,11 @@
 <template>
-  <nav class="TheFooter">
+  <nav class="TheHeader">
     <NuxtLink to="/"></NuxtLink>
   </nav>
 </template>
 
 <script>
-export default {
-  name: 'TheFooter'
-}
+  export default {
+    name: 'TheHeader'
+  }
 </script>
