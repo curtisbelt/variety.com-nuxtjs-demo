@@ -1,3 +1,1 @@
-module.exports = {
-  theme: {}
-}
+module.exports = require('./config/tailwindcss/index')
