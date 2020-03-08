@@ -1,0 +1,43 @@
+import Vue from 'vue'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
+import {
+  FontAwesomeIcon,
+  FontAwesomeLayers
+} from '@fortawesome/vue-fontawesome'
+
+// Brands
+import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons/faInstagram'
+import { faPinterest } from '@fortawesome/free-brands-svg-icons/faPinterest'
+import { faTumblr } from '@fortawesome/free-brands-svg-icons/faTumblr'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
+
+// Light
+
+// Regular
+import { faBars } from '@fortawesome/pro-regular-svg-icons/faBars'
+import { faSearch } from '@fortawesome/pro-regular-svg-icons/faSearch'
+
+// Solid
+
+library.add(
+  // Brands
+  faFacebookF,
+  faInstagram,
+  faPinterest,
+  faTumblr,
+  faTwitter,
+
+  // Light
+
+  // Regular
+  faBars,
+  faSearch
+
+  // Solid
+)
+
+config.autoAddCss = false // https://github.com/FortAwesome/vue-fontawesome/issues/14
+
+Vue.component('AppIcon', FontAwesomeIcon)
+Vue.component('AppIconLayers', FontAwesomeLayers)
