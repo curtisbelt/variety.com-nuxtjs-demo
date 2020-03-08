@@ -7,8 +7,11 @@ export default {
   eslint: { fix: true },
   modern: isProd,
   modules: ['@nuxtjs/apollo'],
-  buildModules: ['@nuxtjs/tailwindcss', '@nuxtjs/eslint-module'],
+  buildModules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/eslint-module',
+    'nuxt-svg-loader'
+  ],
   plugins: [{ src: '~plugins/font-awesome.js' }],
   vue: { config: { productionTip: false } },
   watch: ['~/config/**/*'],
