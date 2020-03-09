@@ -18,7 +18,10 @@ export default {
   eslint: { fix: true },
   modern: process.env.NODE_ENV === 'production',
   modules: ['@nuxtjs/apollo'],
-  plugins: [{ src: '~plugins/font-awesome.js' }],
+  plugins: [
+    { src: '~plugins/font-awesome.js' },
+    { src: '~plugins/register-app-components.js' }
+  ],
   purgeCSS: {
     whitelistPatterns: [
       // font-awesome
