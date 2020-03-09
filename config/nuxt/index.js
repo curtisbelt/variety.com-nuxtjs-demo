@@ -11,6 +11,7 @@ export default {
     'nuxt-svg-loader'
   ],
   css: [
+    '~/assets/css/fonts.pcss',
     '@fortawesome/fontawesome-svg-core/styles.css',
     '~/assets/css/global.pcss'
   ],
@@ -18,6 +19,15 @@ export default {
   modern: process.env.NODE_ENV === 'production',
   modules: ['@nuxtjs/apollo'],
   plugins: [{ src: '~plugins/font-awesome.js' }],
+  purgeCSS: {
+    whitelistPatterns: [
+      // font-awesome
+      /^fa-/,
+      /--fa$/,
+      // flickity slider
+      /^flickity-/
+    ]
+  },
   vue: { config: { productionTip: false } },
   watch: ['~/config/**/*'],
   apollo,
