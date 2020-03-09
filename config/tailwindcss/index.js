@@ -8,8 +8,13 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
-    colors: require('./colors')
+    extend: {
+      colors: require('./colors')
+    }
   },
   variants: {},
-  plugins: [require('@curtisbelt/tailwindcss-extras')] // https://github.com/curtisbelt/tailwindcss-extras
+  plugins: [
+    require('@tailwindcss/ui'),
+    require('@curtisbelt/tailwindcss-extras') // https://github.com/curtisbelt/tailwindcss-extras
+  ]
 }
