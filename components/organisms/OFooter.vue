@@ -1,21 +1,60 @@
 <template>
-  <nav class="OFooter // bg-brand-teal-500 text-white text-center">
-    <div class="container text-12px py-10">
-      <p>
-        Privacy Policy | Your California Privacy Rights | Ad Choices | Terms Of
-        Use
-      </p>
-      <p>
-        Do Not Sell My Personal Information | VIP+ FAQ | Variety Magazine FAQ
-      </p>
+  <nav class="TheFooter">
+    <button @click="onLogout">Logout</button>
+    <ul>
+      <li>
+        <router-link to="/">Index</router-link>
+      </li>
+      <li>
+        <router-link to="/page-a">Page A - only logged in user</router-link>
+      </li>
+      <li>
+        <router-link to="/page-b">Page B</router-link>
+      </li>
+    </ul>
+    <p>
+      {{ connected }}
+    </p>
 
-      <p class="mt-4">© Copyright 2020 - Penske Media Corporation</p>
-    </div>
+    <button @click="handleSetConnected">Set connected to false</button>
   </nav>
 </template>
 
 <script>
+  import gql from 'graphql-tag'
+
   export default {
-    name: 'OFooter',
+    name: 'TheFooter',
+    data() {
+      return {
+        connected: null,
+      }
+    },
+    apollo: {
+      connected: {
+        query: gql`
+          query isConnected {
+            connected @client
+          }
+        `,
+      },
+    },
+    methods: {
+      async onLogout() {
+        await this.$apolloHelpers.onLogout()
+      },
+      handleSetConnected() {
+        this.$apollo.mutate({
+          mutation: gql`
+            mutation setConnected($value: Boolean!) {
+              connectedSet(value: $value) @client
+            }
+          `,
+          variables: {
+            value: false,
+          },
+        })
+      },
+    },
   }
 </script>
