@@ -45,7 +45,7 @@ export default {
        * Fix absolute URLs which really should have been relative
        * Example: "http://stamford.localhost/home" -> "/home"
        */
-      const hostUrl = 'vanilla.localhost'
+      const hostUrl = process.env.RELATIVE_BASE_URL_ALIAS
       const indexOfHost = url.indexOf('//' + hostUrl)
       if (indexOfHost !== -1) {
         url = url.substring(indexOfHost + 2 + hostUrl.length)

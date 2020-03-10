@@ -1,42 +1,64 @@
 <template>
-  <div class="Home">
+  <div class="Home // font-ibm-plex-sans">
     <HomeTopStories />
 
-    <ul v-if="menuItems" class="flex">
-      <li v-for="menuItem in menuItems.nodes" :key="menuItem.id" class="mr-6">
-        <AppLink :to="menuItem.url" class="text-blue-500 hover:text-blue-800">
-          {{ menuItem.label }}
-        </AppLink>
-      </li>
-    </ul>
+    <h3 class="font-graphik-sans text-4xl font-bold uppercase">
+      The Big Ticket
+    </h3>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+      Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
+      nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
+      tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
+      nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+      per inceptos himenaeos.
+    </p>
+
+    <p>
+      {{ connected }}
+    </p>
+
+    <button @click="handleSetConnected">Set connected to true</button>
   </div>
 </template>
 
 <script>
   import gql from 'graphql-tag'
   import HomeTopStories from '~/components/Home/HomeTopStories'
-  import AppLink from '~/components/shared/App/AppLink'
 
   export default {
     name: 'Home',
     components: {
-      HomeTopStories,
-      AppLink
+      HomeTopStories
     },
-
+    data() {
+      return {
+        connected: null
+      }
+    },
     apollo: {
-      menuItems: gql`
-        {
-          menuItems(where: { location: PRIMARY }) {
-            nodes {
-              id
-              url
-              label
-              cssClasses
-            }
+      connected: {
+        query: gql`
+          query isConnected {
+            connected @client
           }
-        }
-      `
+        `
+      }
+    },
+    methods: {
+      handleSetConnected() {
+        this.$apollo.mutate({
+          mutation: gql`
+            mutation setConnected($value: Boolean!) {
+              connectedSet(value: $value) @client
+            }
+          `,
+          variables: {
+            value: true
+          }
+        })
+      }
     }
   }
 </script>
