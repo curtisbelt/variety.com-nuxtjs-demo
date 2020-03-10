@@ -1,5 +1,11 @@
 /* purgecss start ignore */
+
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
+/* Import custom styles here in order to ensure utilities can override them */
+@import '~/assets/css/global.pcss';
+
 /* purgecss end ignore */
+
 @import 'tailwindcss/utilities';

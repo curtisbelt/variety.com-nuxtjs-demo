@@ -12,8 +12,7 @@ export default {
   ],
   css: [
     '~/assets/css/fonts.pcss',
-    '@fortawesome/fontawesome-svg-core/styles.css',
-    '~/assets/css/global.pcss'
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
   eslint: { fix: true },
   modern: process.env.NODE_ENV === 'production',
