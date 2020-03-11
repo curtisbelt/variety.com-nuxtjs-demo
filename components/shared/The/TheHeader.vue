@@ -37,7 +37,7 @@
     name: 'TheHeader',
     components: {
       VarietyLogo,
-      OneFifteenLogo
+      OneFifteenLogo,
     },
     apollo: {
       menuItems: gql`
@@ -51,7 +51,7 @@
             }
           }
         }
-      `
-    }
+      `,
+    },
   }
 </script>

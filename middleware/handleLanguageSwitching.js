@@ -8,7 +8,7 @@ export default function({ from, route, redirect }) {
   if (route.path.match(/^\/en/) !== null) {
     return redirect(301, {
       path: route.path.substring(3) || '/',
-      query: route.query
+      query: route.query,
     })
   }
 

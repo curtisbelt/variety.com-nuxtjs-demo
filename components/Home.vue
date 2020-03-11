@@ -15,6 +15,12 @@
       per inceptos himenaeos.
     </p>
 
+    <AppLink
+      to="/2020/film/news/iranian-yalda-to-screen-at-sundance-without-director-due-to-u-s-iran-tensions-1203466584/"
+    >
+      Test post
+    </AppLink>
+
     <p>
       {{ connected }}
     </p>
@@ -30,11 +36,11 @@
   export default {
     name: 'Home',
     components: {
-      HomeTopStories
+      HomeTopStories,
     },
     data() {
       return {
-        connected: null
+        connected: null,
       }
     },
     apollo: {
@@ -43,8 +49,8 @@
           query isConnected {
             connected @client
           }
-        `
-      }
+        `,
+      },
     },
     methods: {
       handleSetConnected() {
@@ -55,10 +61,10 @@
             }
           `,
           variables: {
-            value: true
-          }
+            value: true,
+          },
         })
-      }
-    }
+      },
+    },
   }
 </script>

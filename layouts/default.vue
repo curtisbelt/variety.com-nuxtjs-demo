@@ -12,7 +12,7 @@
     name: 'Default',
     components: {
       TheHeader,
-      TheFooter: () => import('~/components/shared/The/TheFooter')
-    }
+      TheFooter: () => import('~/components/shared/The/TheFooter'),
+    },
   }
 </script>

@@ -11,8 +11,8 @@ function createLanguageRoutes(routes, isRootLevel = true) {
       component: route.component,
       name: `lang-${route.name}`,
       ...(route.children && {
-        children: createLanguageRoutes(route.children, false)
-      })
+        children: createLanguageRoutes(route.children, false),
+      }),
     })
   })
 
@@ -30,5 +30,5 @@ export default {
       return route.name === 'all'
     })
     routes.push(routes.splice(wildcardIndex, 1)[0])
-  }
+  },
 }

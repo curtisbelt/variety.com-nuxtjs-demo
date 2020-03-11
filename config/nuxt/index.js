@@ -11,11 +11,11 @@ export default {
     '@nuxtjs/dotenv',
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
-    'nuxt-svg-loader'
+    'nuxt-svg-loader',
   ],
   css: [
     '~/assets/css/fonts.pcss',
-    '@fortawesome/fontawesome-svg-core/styles.css'
+    '@fortawesome/fontawesome-svg-core/styles.css',
   ],
   eslint: { fix: true },
   env: {
@@ -27,7 +27,7 @@ export default {
   modules: ['@nuxtjs/apollo'],
   plugins: [
     { src: '~plugins/font-awesome.js' },
-    { src: '~plugins/register-app-components.js' }
+    { src: '~plugins/register-app-components.js' },
   ],
   purgeCSS: {
     whitelistPatterns: [
@@ -35,8 +35,8 @@ export default {
       /^fa-/,
       /--fa$/,
       // flickity slider
-      /^flickity-/
-    ]
+      /^flickity-/,
+    ],
   },
   vue: { config: { productionTip: false } },
   watch: ['~/config/**/*'],
@@ -44,5 +44,5 @@ export default {
   build,
   features,
   head,
-  router
+  router,
 }

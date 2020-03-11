@@ -6,24 +6,24 @@ export default {
   props: {
     to: {
       type: [String, Object],
-      required: false
+      required: false,
     },
     target: {
       type: String,
-      required: false
+      required: false,
     },
     rel: {
       type: String,
-      required: false
+      required: false,
     },
     query: {
       type: Object,
-      required: false
+      required: false,
     },
     tag: {
       type: String,
-      default: ''
-    }
+      default: '',
+    },
   },
   render(createElement, context) {
     const linkAttributes = (function() {
@@ -37,7 +37,7 @@ export default {
       if (url === null || url.length === 0) {
         return {
           is: 'span',
-          to: ''
+          to: '',
         }
       }
 
@@ -66,7 +66,7 @@ export default {
           const currentlyRoutedLang = get(
             context.parent.$route,
             'params.lang',
-            ''
+            '',
           )
           if (currentlyRoutedLang.length > 0) {
             url = '/' + currentlyRoutedLang + url
@@ -98,7 +98,7 @@ export default {
         if (typeof get(context.props, 'to') === 'object') {
           to = {
             path: url,
-            query: JSON.parse(JSON.stringify(get(context.props, 'to.query')))
+            query: JSON.parse(JSON.stringify(get(context.props, 'to.query'))),
           }
         } else {
           to = url
@@ -111,7 +111,7 @@ export default {
           tag: context.props.tag || 'a',
           target: context.props.target,
           rel: context.props.rel,
-          ...(url === '/' && { exact: true })
+          ...(url === '/' && { exact: true }),
         }
 
         /**
@@ -122,7 +122,7 @@ export default {
           is: 'a',
           href: url,
           target: context.props.target || '_blank',
-          rel: context.props.rel || 'noopener noreferrer'
+          rel: context.props.rel || 'noopener noreferrer',
         }
       }
     })()
@@ -132,9 +132,9 @@ export default {
       {
         ...context.data,
         props: linkAttributes,
-        attrs: linkAttributes
+        attrs: linkAttributes,
       },
-      context.slots().default
+      context.slots().default,
     )
-  }
+  },
 }

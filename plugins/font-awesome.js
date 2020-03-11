@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { library, config } from '@fortawesome/fontawesome-svg-core'
 import {
   FontAwesomeIcon,
-  FontAwesomeLayers
+  FontAwesomeLayers,
 } from '@fortawesome/vue-fontawesome'
 
 // Brands
@@ -32,7 +32,7 @@ library.add(
 
   // Regular
   faBars,
-  faSearch
+  faSearch,
 
   // Solid
 )

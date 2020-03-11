@@ -50,8 +50,8 @@
         // Static parameters
         variables() {
           return { uri: this.$route.params.pathMatch }
-        }
-      }
-    }
+        },
+      },
+    },
   }
 </script>

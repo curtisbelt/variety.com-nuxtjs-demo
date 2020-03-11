@@ -2,7 +2,7 @@ const isProd = process.env.NODE_ENV === 'production'
 const isDev = !isProd
 
 export default {
-  parallel: isDev
+  parallel: isDev,
   // cache: isDev,
   // hardSource: isDev
 

@@ -3,7 +3,7 @@ import Vue from 'vue'
 const requireComponent = require.context(
   '@/components/shared/App',
   true,
-  /App[\w-]+\.(vue|js)$/
+  /App[\w-]+\.(vue|js)$/,
 )
 
 requireComponent.keys().forEach((fileName) => {
