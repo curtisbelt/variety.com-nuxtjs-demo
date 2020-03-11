@@ -42,7 +42,7 @@
     apollo: {
       menuItems: gql`
         {
-          menuItems(where: { location: PRIMARY }) {
+          menuItems(where: { location: PMC_VARIETY_HEADER }) {
             nodes {
               id
               url

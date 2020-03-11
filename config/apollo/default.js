@@ -2,8 +2,7 @@ import gql from 'graphql-tag'
 
 export default function(ctx) {
   return {
-    httpEndpoint: process.env.GRAPHQL_HTTP_ENDPOINT,
-    wsEndpoint: process.env.GRAPHQL_WS_ENDPOINT,
+    httpEndpoint: process.env.WPGRAPHQL_HTTP_ENDPOINT,
     httpLinkOptions: {
       credentials: 'same-origin'
     },

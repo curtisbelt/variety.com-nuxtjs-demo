@@ -19,9 +19,9 @@ export default {
   ],
   eslint: { fix: true },
   env: {
-    RELATIVE_BASE_URL_ALIAS: process.env.RELATIVE_BASE_URL_ALIAS,
-    GRAPHQL_HTTP_ENDPOINT: process.env.GRAPHQL_HTTP_ENDPOINT,
-    GRAPHQL_WS_ENDPOINT: process.env.GRAPHQL_WS_ENDPOINT
+    APPLINK_RELATIVE_BASE_URL: process.env.APPLINK_RELATIVE_BASE_URL,
+    WPGRAPHQL_HTTP_ENDPOINT: process.env.WPGRAPHQL_HTTP_ENDPOINT,
+    MENU_LOCATION_THEHEADER: process.env.MENU_LOCATION_THEHEADER,
   },
   modern: process.env.NODE_ENV === 'production',
   modules: ['@nuxtjs/apollo'],
