@@ -13,10 +13,12 @@ import { faTumblr } from '@fortawesome/free-brands-svg-icons/faTumblr'
 import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter'
 
 // Light
+import { faBars } from '@fortawesome/pro-light-svg-icons/faBars'
+import { faSearch } from '@fortawesome/pro-light-svg-icons/faSearch'
 
 // Regular
-import { faBars } from '@fortawesome/pro-regular-svg-icons/faBars'
-import { faSearch } from '@fortawesome/pro-regular-svg-icons/faSearch'
+// import { faBars } from '@fortawesome/pro-regular-svg-icons/faBars'
+// import { faSearch } from '@fortawesome/pro-regular-svg-icons/faSearch'
 
 // Solid
 
@@ -29,10 +31,10 @@ library.add(
   faTwitter,
 
   // Light
-
-  // Regular
   faBars,
   faSearch,
+
+  // Regular
 
   // Solid
 )

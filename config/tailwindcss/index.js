@@ -8,6 +8,9 @@ module.exports = {
   important: false,
   separator: ':',
   theme: {
+    container: {
+      center: true,
+    },
     fontFamily: {
       'ibm-plex-sans': [
         '"IBM Plex Sans"',
@@ -29,6 +32,21 @@ module.exports = {
         '"Para Supreme Regular"',
         ...require('tailwindcss/defaultConfig').theme.fontFamily.serif,
       ],
+    },
+    fontSize: {
+      '10px': '0.625rem',
+      '11px': '0.6875rem',
+      '12px': '0.75rem',
+      '13px': '0.8125rem',
+      '14px': '0.875rem',
+      '16px': '1rem',
+      '18px': '1.125rem',
+      '21px': '1.313rem',
+      '24px': '1.5rem',
+      '32px': '2rem',
+      '36px': '2.25rem',
+      '42px': '2.625rem',
+      '52px': '3.25rem',
     },
     extend: {
       colors: require('./colors'),

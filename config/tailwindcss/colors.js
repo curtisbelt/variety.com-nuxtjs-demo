@@ -1,3 +1,7 @@
+/**
+ * Note these are EXTENDING the default TailwindCSS colors
+ */
+
 module.exports = {
   'brand-yellow': {
     100: '#FFFDE6',
