@@ -1,18 +1,18 @@
 <template>
   <div>
-    <TheHeader />
+    <OHeader />
     <Nuxt />
-    <TheFooter />
+    <OFooter />
   </div>
 </template>
 
 <script>
-  import TheHeader from '~/components/shared/The/TheHeader'
+  import OHeader from '~/components/organisms/OHeader'
   export default {
     name: 'Default',
     components: {
-      TheHeader,
-      TheFooter: () => import('~/components/shared/The/TheFooter'),
+      OHeader,
+      OFooter: () => import('~/components/organisms/OFooter'),
     },
   }
 </script>

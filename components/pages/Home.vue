@@ -15,11 +15,21 @@
       per inceptos himenaeos.
     </p>
 
-    <AppLink
-      to="/2020/film/news/iranian-yalda-to-screen-at-sundance-without-director-due-to-u-s-iran-tensions-1203466584/"
+    <ALink
+      to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
     >
       Test post
-    </AppLink>
+    </ALink>
+    <div class="m-10 font-ibm-plex-sans">
+      <ul>
+        <li v-for="(meta_value, meta_key, index) in meta_data" :key="index">
+          <span class="uppercase font-semibold text-cool-gray-400">
+            {{ meta_key }}:
+          </span>
+          {{ meta_value }}
+        </li>
+      </ul>
+    </div>
 
     <p>
       {{ connected }}
@@ -31,7 +41,7 @@
 
 <script>
   import gql from 'graphql-tag'
-  import HomeTopStories from '~/components/Home/HomeTopStories'
+  import HomeTopStories from './Home/HomeTopStories'
 
   export default {
     name: 'Home',
@@ -41,6 +51,12 @@
     data() {
       return {
         connected: null,
+        meta_data: {
+          'View Gallery': 12,
+          Location: 'Calabasas, Calif.',
+          Price: '$4.625 million',
+          Size: '6,040 square feet, 6 bedrooms, 6.5 bathrooms',
+        },
       }
     },
     apollo: {

@@ -1,5 +1,5 @@
 <template>
-  <header class="TheHeader // bg-brand-teal-500 text-white text-12px font-bold">
+  <header class="OHeader // bg-brand-teal-500 text-white text-12px font-bold">
     <div
       class="container p-6 grid grid-cols-3 items-center uppercase tracking-wider"
     >
@@ -19,10 +19,10 @@
         </nav>
       </div>
 
-      <div class="flex items-center justify-center">
+      <ALink to="/" class="flex items-center justify-center">
         <OneFifteenLogo class="h-12 mr-4" />
         <VarietyLogo class="h-24" />
-      </div>
+      </ALink>
       <div class="justify-end grid grid-flow-col gap-8">
         <button
           class="uppercase font-bold border border-white p-2 tracking-widest "
@@ -46,6 +46,17 @@
         </li>
       </ul>
     </nav>
+    <div class="grid grid-flow-col justify-start gap-6">
+      <ALink to="/gallery/">Archive: Gallery</ALink>
+      <ALink to="/list/">Archive: Lists</ALink>
+      <ALink
+        to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
+      >
+        Post: Dirt
+      </ALink>
+      <ALink to="/variety-about-us/">Page: About Us</ALink>
+      <ALink to="/video/the-two-popes-sistine-chapel/">Video: Two Popes</ALink>
+    </div>
   </header>
 </template>
 
@@ -57,7 +68,7 @@
   import OneFifteenLogo from '@/assets/svg/OneFifteenLogo.svg'
 
   export default {
-    name: 'TheHeader',
+    name: 'OHeader',
     components: {
       VarietyLogo,
       OneFifteenLogo,

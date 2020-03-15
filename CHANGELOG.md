@@ -8,7 +8,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### Features
 
-- add default layout, TheFooter, TheHeader ([6eb1798](https://github.com/CurtisBelt/nuxtjs-template/commit/6eb17981a59afe701b221f69eeed147493a3ed9a))
+- add default layout, OFooter, OHeader ([6eb1798](https://github.com/CurtisBelt/nuxtjs-template/commit/6eb17981a59afe701b221f69eeed147493a3ed9a))
 - use header.titleTemplate ([a9892bb](https://github.com/CurtisBelt/nuxtjs-template/commit/a9892bb7056effffaf2ddd2064eb38e8bbfdef0b))
 
 ### Bug Fixes

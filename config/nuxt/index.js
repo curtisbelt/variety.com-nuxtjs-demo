@@ -19,15 +19,15 @@ export default {
   ],
   eslint: { fix: true },
   env: {
-    APPLINK_RELATIVE_BASE_URL: process.env.APPLINK_RELATIVE_BASE_URL,
+    RELATIVE_BASE_URL: process.env.RELATIVE_BASE_URL,
     WPGRAPHQL_HTTP_ENDPOINT: process.env.WPGRAPHQL_HTTP_ENDPOINT,
-    MENU_LOCATION_THEHEADER: process.env.MENU_LOCATION_THEHEADER,
+    HEADER_MENU_LOCATION: process.env.HEADER_MENU_LOCATION,
   },
   modern: process.env.NODE_ENV === 'production',
   modules: ['@nuxtjs/apollo'],
   plugins: [
     { src: '~plugins/font-awesome.js' },
-    { src: '~plugins/register-app-components.js' },
+    { src: '~plugins/globally-register-atom-components.js' },
   ],
   purgeCSS: {
     whitelistPatterns: [
