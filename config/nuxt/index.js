@@ -28,6 +28,7 @@ export default {
   plugins: [
     { src: '~plugins/font-awesome.js' },
     { src: '~plugins/globally-register-atom-components.js' },
+    { src: '~plugins/v-click-outside.js', mode: 'client' },
   ],
   purgeCSS: {
     whitelistPatterns: [
