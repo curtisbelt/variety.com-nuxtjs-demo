@@ -12,19 +12,35 @@
         </button>
         <nav class="row-span-2">
           <ul class="ml-8 grid gap-1 justify-center">
-            <li>Have a news tip?</li>
-            <li>Newsletters</li>
-            <li>
-              <MPopper class="p-2">
-                U.S. Edition
-                <aside slot="popper">
-                  <ALink to="/variety-about-us/">Page: About Us</ALink>
-                  <ALink to="/video/the-two-popes-sistine-chapel/"
-                    >Video: Two Popes</ALink
-                  >
-                </aside>
-              </MPopper>
-            </li>
+            <li><ALink to="/">Have a news tip?</ALink></li>
+            <li><ALink to="/">Newsletters</ALink></li>
+            <MPopper
+              ref="editionsMenu"
+              tag-name="li"
+              trigger="clickToOpen"
+              :options="{
+                placement: 'bottom-end',
+                modifiers: [
+                  {
+                    name: 'offset',
+                    options: {
+                      offset: [0, 8],
+                    },
+                  },
+                ],
+              }"
+            >
+              <div class="popper w-24" @click="$refs.editionsMenu.doClose()">
+                <ALink to="/variety-about-us/">Asia</ALink><br />
+                <ALink to="/video/the-two-popes-sistine-chapel/">
+                  Global
+                </ALink>
+              </div>
+
+              <div slot="reference" class="cursor-pointer">
+                U.S. Edition <AppIcon :icon="['fas', 'caret-down']" />
+              </div>
+            </MPopper>
           </ul>
         </nav>
       </div>
@@ -72,9 +88,9 @@
 
 <script>
   import gql from 'graphql-tag'
+  import MPopper from '~/components/molecules/MPopper'
   import VarietyLogo from '@/assets/svg/VarietyLogo.svg'
   import OneFifteenLogo from '@/assets/svg/OneFifteenLogo.svg'
-  import MPopper from '~/components/molecules/MPopper'
 
   export default {
     name: 'OHeader',

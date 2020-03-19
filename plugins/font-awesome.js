@@ -21,6 +21,9 @@ import { faSearch } from '@fortawesome/pro-light-svg-icons/faSearch'
 // import { faSearch } from '@fortawesome/pro-regular-svg-icons/faSearch'
 
 // Solid
+import { faCaretDown } from '@fortawesome/pro-solid-svg-icons/faCaretDown'
+
+// Duotone
 
 library.add(
   // Brands
@@ -37,6 +40,9 @@ library.add(
   // Regular
 
   // Solid
+  faCaretDown,
+
+  // Duotone
 )
 
 config.autoAddCss = false // https://github.com/FortAwesome/vue-fontawesome/issues/14
