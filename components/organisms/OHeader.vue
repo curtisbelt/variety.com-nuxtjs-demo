@@ -72,7 +72,7 @@
         </li>
       </ul>
     </nav>
-    <div class="grid grid-flow-col justify-start gap-6">
+    <div class="hidden md:grid grid-flow-col justify-start gap-6">
       <ALink to="/gallery/">Archive: Gallery</ALink>
       <ALink to="/list/">Archive: Lists</ALink>
       <ALink
@@ -82,6 +82,7 @@
       </ALink>
       <ALink to="/variety-about-us/">Page: About Us</ALink>
       <ALink to="/video/the-two-popes-sistine-chapel/">Video: Two Popes</ALink>
+      <ALink to="/vip-marketing-page/">VIP Marketing Page</ALink>
     </div>
   </header>
 </template>
