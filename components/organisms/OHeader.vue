@@ -1,7 +1,7 @@
 <template>
   <header class="OHeader // bg-brand-teal-500 text-white text-12px font-bold">
     <div
-      class="container p-6 grid grid-cols-3 items-center uppercase tracking-wider"
+      class="container px-4 py-6 grid grid-cols-3 items-center uppercase tracking-wider"
     >
       <div class="justify-start grid grid-flow-col gap-3 items-center">
         <button class="text-21px">

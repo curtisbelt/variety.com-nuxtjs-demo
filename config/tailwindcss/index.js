@@ -10,6 +10,15 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      padding: '1rem',
+    },
+    borderWidth: {
+      default: '1px',
+      '0': '0',
+      '2': '2px',
+      '3': '3px',
+      '4': '4px',
+      '6': '6px',
     },
     fontFamily: {
       'graphik-sans': [
@@ -46,11 +55,15 @@ module.exports = {
       '32px': '2rem', // text-3xl
       '36px': '2.25rem', // text-4xl
       '42px': '2.625rem', // text-5xl
-      '52px': '3.25rem', // text-6xl
-      '70px': '4.375rem', // text-7xl
+      '47px': '2.9375rem', // text-6xl
+      '52px': '3.25rem', // text-7xl
+      '70px': '4.375rem', // text-8xl
     },
     extend: {
       colors: require('./colors'),
+      boxShadow: {
+        card: '0 2px 4px 0 rgba(0,0,0,0.5)',
+      },
     },
   },
   variants: {},
