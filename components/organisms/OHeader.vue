@@ -89,7 +89,7 @@
 
 <script>
   import gql from 'graphql-tag'
-  import MPopper from '~/components/molecules/MPopper'
+  import MPopper from '~/components/need-to-package/MPopper'
   import VarietyLogo from '@/assets/svg/VarietyLogo.svg'
   import OneFifteenLogo from '@/assets/svg/OneFifteenLogo.svg'
 

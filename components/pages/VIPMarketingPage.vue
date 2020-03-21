@@ -34,18 +34,29 @@
         </div>
       </div>
       <div class="w-full md:w-2/3 aspect-ratio-16-9">
-        <iframe
-          class="absolute inset-0 w-full h-full"
-          src="https://cdn.jwplayer.com/players/TTy91oNt-TbqO5K8A.html"
-        ></iframe>
+        <JWPlayer
+          script="https://content.jwplatform.com/libraries/TbqO5K8A.js"
+          :options="{
+            playlist: 'http://content.jwplatform.com/jw6/TTy91oNt.xml',
+            repeat: true,
+            autostart: 'viewable',
+            mute: true,
+            controls: false,
+          }"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+  import JWPlayer from '~/components/need-to-package/JWPlayer'
+
   export default {
     name: 'VIPMarketingPage',
+    components: {
+      JWPlayer,
+    },
   }
 </script>
 
