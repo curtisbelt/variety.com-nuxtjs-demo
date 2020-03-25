@@ -12,7 +12,11 @@ export default {
     '@nuxtjs/eslint-module',
     '@nuxtjs/tailwindcss',
     'nuxt-svg-loader',
+    '@nuxtjs/google-analytics',
   ],
+  googleAnalytics: {
+    id: 'UA-149131633-2',
+  },
   css: [
     '~/assets/css/fonts.pcss',
     '@fortawesome/fontawesome-svg-core/styles.css',
