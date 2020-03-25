@@ -51,12 +51,12 @@
       </ALink>
       <div class="justify-end grid grid-flow-col gap-8">
         <button
-          class="uppercase font-bold border border-white p-2 tracking-widest "
+          class="uppercase font-bold border border-white p-2 tracking-widest"
         >
           Subscribe
         </button>
         <button
-          class="uppercase font-bold border border-white p-2 tracking-widest "
+          class="uppercase font-bold border border-white p-2 tracking-widest"
         >
           Login
         </button>

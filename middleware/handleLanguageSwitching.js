@@ -1,6 +1,6 @@
 import get from 'lodash/get'
 
-export default function({ from, route, redirect }) {
+export default function ({ from, route, redirect }) {
   /**
    * Strip default language `/en` from path and redirect
    */

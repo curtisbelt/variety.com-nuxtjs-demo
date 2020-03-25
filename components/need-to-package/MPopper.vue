@@ -289,7 +289,7 @@
           this.popperJS = createPopper(
             this.referenceElm,
             this.popper,
-            this.popperOptions,
+            this.popperOptions
           )
         })
       },

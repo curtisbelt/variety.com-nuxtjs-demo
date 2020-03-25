@@ -40,7 +40,7 @@ library.add(
   // Regular
 
   // Solid
-  faCaretDown,
+  faCaretDown
 
   // Duotone
 )

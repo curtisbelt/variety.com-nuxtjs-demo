@@ -10,7 +10,7 @@ const requireComponent = require.context(
   // Do not look in subdirectories
   false,
   // Only include "A" prefixed .vue files
-  /A[\w-]+\.(vue|js)$/,
+  /A[\w-]+\.(vue|js)$/
 )
 
 // For each matching file name...

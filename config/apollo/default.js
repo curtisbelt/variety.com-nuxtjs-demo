@@ -1,6 +1,6 @@
 import gql from 'graphql-tag'
 
-export default function(ctx) {
+export default function (ctx) {
   return {
     httpEndpoint: process.env.WPGRAPHQL_HTTP_ENDPOINT,
     httpLinkOptions: {

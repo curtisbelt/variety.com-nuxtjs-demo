@@ -26,7 +26,7 @@ export default {
     },
   },
   render(createElement, context) {
-    const linkAttributes = (function() {
+    const linkAttributes = (function () {
       let url = get(context.props, 'to', null)
       if (typeof url === 'object') {
         url = get(context.props, 'to.path', '')
@@ -66,7 +66,7 @@ export default {
           const currentlyRoutedLang = get(
             context.parent.$route,
             'params.lang',
-            '',
+            ''
           )
           if (currentlyRoutedLang.length > 0) {
             url = '/' + currentlyRoutedLang + url
@@ -134,7 +134,7 @@ export default {
         props: linkAttributes,
         attrs: linkAttributes,
       },
-      context.slots().default,
+      context.slots().default
     )
   },
 }
