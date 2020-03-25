@@ -8,11 +8,12 @@
 
 <script>
   import OHeader from '~/components/organisms/OHeader'
+  import OFooter from '~/components/organisms/OFooter'
   export default {
     name: 'Default',
     components: {
       OHeader,
-      OFooter: () => import('~/components/organisms/OFooter'),
+      OFooter,
     },
   }
 </script>

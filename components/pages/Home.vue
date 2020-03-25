@@ -2,40 +2,32 @@
   <div class="Home // font-ibm-plex-sans">
     <HomeTopStories />
 
-    <h3 class="font-graphik-sans text-4xl font-bold uppercase">
-      The Big Ticket
-    </h3>
+    <div class="container my-8">
+      <ALink
+        class="text-blue-500"
+        to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
+      >
+        Test post
+      </ALink>
+      <div class="m-10 font-ibm-plex-sans">
+        <ul>
+          <li v-for="(meta_value, meta_key, index) in meta_data" :key="index">
+            <span class="uppercase font-semibold text-cool-gray-400">
+              {{ meta_key }}:
+            </span>
+            {{ meta_value }}
+          </li>
+        </ul>
+      </div>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-      Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
-      nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-      tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget
-      nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra,
-      per inceptos himenaeos.
-    </p>
+      <p>
+        {{ connected }}
+      </p>
 
-    <ALink
-      to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
-    >
-      Test post
-    </ALink>
-    <div class="m-10 font-ibm-plex-sans">
-      <ul>
-        <li v-for="(meta_value, meta_key, index) in meta_data" :key="index">
-          <span class="uppercase font-semibold text-cool-gray-400">
-            {{ meta_key }}:
-          </span>
-          {{ meta_value }}
-        </li>
-      </ul>
+      <button class="text-blue-500" @click="handleSetConnected">
+        Set connected to true
+      </button>
     </div>
-
-    <p>
-      {{ connected }}
-    </p>
-
-    <button @click="handleSetConnected">Set connected to true</button>
   </div>
 </template>
 

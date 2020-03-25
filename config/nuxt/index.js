@@ -44,6 +44,7 @@ export default {
     ],
   },
   vue: { config: { productionTip: false } },
+  render: { http2: { push: true } },
   watch: ['~/config/**/*'],
   apollo,
   build,

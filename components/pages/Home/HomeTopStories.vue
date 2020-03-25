@@ -1,6 +1,6 @@
 <template>
   <div
-    class="HomeTopStories // lg:grid lg:grid-rows-3 lg:grid-flow-col lg:gap-4"
+    class="HomeTopStories // container lg:grid lg:grid-rows-3 lg:grid-flow-col lg:gap-4"
   >
     <div class="p-4 my-4 bg-brand-teal-200 lg:row-span-3 lg:col-span-2 lg:my-0">
       In vel ultrices nisl
@@ -20,5 +20,17 @@
   export default {
     name: 'HomeTopStories',
     // apollo: {},
+
+    /*
+
+    carousel: vip-top-stories
+    limit: 3
+    taxonomy: false
+    filler post_type: variety_vip_post, variety_vip_report
+
+    taxonomy: pmc_carousel_modules
+
+
+    */
   }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <header class="OHeader // bg-brand-teal-500 text-white text-12px font-bold">
     <div
-      class="container px-4 py-6 grid grid-cols-3 items-center uppercase tracking-wider"
+      class="container px-4 py-6 grid grid-cols-3 items-center uppercase tracking-widest"
     >
       <div class="justify-start grid grid-flow-col gap-3 items-center">
         <button class="text-21px">
@@ -63,27 +63,39 @@
       </div>
     </div>
 
-    <nav class="border-t border-white p-2">
+    <nav class="hidden md:block border-t border-white p-2">
       <ul v-if="menuItems" class="flex justify-center text-13px tracking-wider">
-        <li v-for="menuItem in menuItems.nodes" :key="menuItem.id" class="mr-6">
+        <li v-for="menuItem in menuItems.nodes" :key="menuItem.id" class="mr-4">
           <ALink :to="menuItem.url" class="hover:text-brand-yellow-500 p-2">
             {{ menuItem.label }}
           </ALink>
         </li>
       </ul>
     </nav>
-    <div class="hidden md:grid grid-flow-col justify-start gap-6">
-      <ALink to="/gallery/">Archive: Gallery</ALink>
-      <ALink to="/list/">Archive: Lists</ALink>
-      <ALink
-        to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
+
+    <nav class="hidden lg:block bg-white p-4">
+      <ul
+        class="container flex flex-wrap justify-center text-14px tracking-wider leading-6 uppercase text-brand-teal-400"
       >
-        Post: Dirt
-      </ALink>
-      <ALink to="/variety-about-us/">Page: About Us</ALink>
-      <ALink to="/video/the-two-popes-sistine-chapel/">Video: Two Popes</ALink>
-      <ALink to="/vip-marketing-page/">VIP Marketing Page</ALink>
-    </div>
+        <li class="px-4 font-bold text-brand-teal-500">Trending:</li>
+        <li class="px-4">'<ALink to="/gallery/">Gallery</ALink>'</li>
+        <li class="px-4">'<ALink to="/list/">Lists</ALink>'</li>
+        <li class="px-4">
+          '<ALink
+            to="/2019/dirt/finance/hedge-funder-thomas-laffont-scores-13-million-malibu-ranch-1203308095/"
+          >
+            Dirt </ALink
+          >'
+        </li>
+        <li class="px-4">'<ALink to="/variety-about-us/">About Us</ALink>'</li>
+        <li class="px-4">
+          '<ALink to="/video/the-two-popes-sistine-chapel/">Two Popes</ALink>'
+        </li>
+        <li class="px-4">
+          '<ALink to="/vip-marketing-page/">VIP Marketing</ALink>'
+        </li>
+      </ul>
+    </nav>
   </header>
 </template>
 
