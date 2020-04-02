@@ -26,8 +26,8 @@
     "@popperjs/core": "^2.1.1",
     "graphql-tag": "^2.10.3",
     "lodash": "^4.17.15",
-    "nuxt": "^2.12.0",
-    "qs": "^6.9.2",
+    "nuxt": "^2.12.2",
+    "qs": "^6.9.3",
     "v-click-outside": "^3.0.1"
   },
   "devDependencies": {
