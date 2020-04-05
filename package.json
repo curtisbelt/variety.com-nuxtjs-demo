@@ -12,7 +12,8 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "format": "eslint --ext .js,.vue --ignore-path .gitignore --fix .",
-    "release": "standard-version"
+    "release": "standard-version",
+    "build-fragment" : "node schemaQuery.js && prettier fragmentTypes.json --write"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",

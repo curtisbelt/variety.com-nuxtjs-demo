@@ -1,0 +1,367 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "INTERFACE",
+        "name": "Node",
+        "possibleTypes": [
+          { "name": "EditorialCategory" },
+          { "name": "GallerySingle" },
+          { "name": "User" },
+          { "name": "Comment" },
+          { "name": "CommentAuthor" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "ContentType" },
+          { "name": "Taxonomy" },
+          { "name": "GenreCategory" },
+          { "name": "VideoSingle" },
+          { "name": "VerticalCategory" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Category" },
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "Tag" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "PostFormat" },
+          { "name": "ThoughtLeaderSingle" },
+          { "name": "UserRole" },
+          { "name": "Menu" },
+          { "name": "MenuItem" },
+          { "name": "Plugin" },
+          { "name": "Theme" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "TermNode",
+        "possibleTypes": [
+          { "name": "EditorialCategory" },
+          { "name": "GenreCategory" },
+          { "name": "VerticalCategory" },
+          { "name": "Category" },
+          { "name": "Tag" },
+          { "name": "PostFormat" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "UniformResourceIdentifiable",
+        "possibleTypes": [
+          { "name": "EditorialCategory" },
+          { "name": "GallerySingle" },
+          { "name": "User" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "GenreCategory" },
+          { "name": "VideoSingle" },
+          { "name": "VerticalCategory" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Category" },
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "Tag" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "PostFormat" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ContentNode",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "CommentAuthorUnion",
+        "possibleTypes": [{ "name": "User" }, { "name": "CommentAuthor" }]
+      },
+      {
+        "kind": "UNION",
+        "name": "PostObjectUnion",
+        "possibleTypes": [
+          { "name": "Post" },
+          { "name": "Page" },
+          { "name": "MediaItem" },
+          { "name": "FeaturedSingle" },
+          { "name": "GallerySingle" },
+          { "name": "ListSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "VideoSingle" },
+          { "name": "ThoughtLeaderSingle" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "VipReportSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithTitle",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithContentEditor",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Page" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithAuthor",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Page" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithFeaturedImage",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithComments",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "MediaItem" },
+          { "name": "VideoSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Page" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "HierarchicalContentNode",
+        "possibleTypes": [{ "name": "MediaItem" }, { "name": "Page" }]
+      },
+      {
+        "kind": "UNION",
+        "name": "ContentTemplateUnion",
+        "possibleTypes": [
+          { "name": "DefaultTemplate" },
+          { "name": "VarietyDigitalSubscriberAccessTemplate" },
+          { "name": "EducationDiscountsTemplate" },
+          { "name": "MarketingPageTemplate" },
+          { "name": "PremierLandingPageTemplate" },
+          { "name": "PremierMarketingPageTemplate" },
+          { "name": "VarietyArchivesTemplate" },
+          { "name": "ScorecardTemplate" },
+          { "name": "VIPMarketingLandingTemplate" },
+          { "name": "PrintPlusShopVIPOnlyTemplate" },
+          { "name": "PrintPlusCorporateSubscriptionTemplate" },
+          { "name": "PrintPlusLandingTemplate" },
+          { "name": "PrintPlusShopPrintOnlyTemplate" },
+          { "name": "PrintPlusShopTabbedTemplate" },
+          { "name": "PrintPlusShopTemplate" },
+          { "name": "VIPCorporateSubscriptionTemplate" },
+          { "name": "VIPPageTemplate" },
+          { "name": "VIPHomeTemplate" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "ContentTemplate",
+        "possibleTypes": [
+          { "name": "DefaultTemplate" },
+          { "name": "VarietyDigitalSubscriberAccessTemplate" },
+          { "name": "EducationDiscountsTemplate" },
+          { "name": "MarketingPageTemplate" },
+          { "name": "PremierLandingPageTemplate" },
+          { "name": "PremierMarketingPageTemplate" },
+          { "name": "VarietyArchivesTemplate" },
+          { "name": "ScorecardTemplate" },
+          { "name": "VIPMarketingLandingTemplate" },
+          { "name": "PrintPlusShopVIPOnlyTemplate" },
+          { "name": "PrintPlusCorporateSubscriptionTemplate" },
+          { "name": "PrintPlusLandingTemplate" },
+          { "name": "PrintPlusShopPrintOnlyTemplate" },
+          { "name": "PrintPlusShopTabbedTemplate" },
+          { "name": "PrintPlusShopTemplate" },
+          { "name": "VIPCorporateSubscriptionTemplate" },
+          { "name": "VIPPageTemplate" },
+          { "name": "VIPHomeTemplate" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithExcerpt",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "ExclusiveSingle" },
+          { "name": "FeaturedSingle" },
+          { "name": "ListSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithTrackbacks",
+        "possibleTypes": [{ "name": "GallerySingle" }, { "name": "Post" }]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithRevisions",
+        "possibleTypes": [
+          { "name": "GallerySingle" },
+          { "name": "Post" },
+          { "name": "ExclusiveSingle" },
+          { "name": "Page" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "INTERFACE",
+        "name": "NodeWithPageAttributes",
+        "possibleTypes": [
+          { "name": "FeaturedSingle" },
+          { "name": "Page" },
+          { "name": "ThoughtLeaderSingle" }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "FeaturedSingleMasterPostUnion",
+        "possibleTypes": [
+          { "name": "Post" },
+          { "name": "Page" },
+          { "name": "MediaItem" },
+          { "name": "FeaturedSingle" },
+          { "name": "GallerySingle" },
+          { "name": "ListSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "VideoSingle" },
+          { "name": "ThoughtLeaderSingle" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "VipReportSingle" }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "TermObjectUnion",
+        "possibleTypes": [
+          { "name": "Category" },
+          { "name": "Tag" },
+          { "name": "PostFormat" },
+          { "name": "GenreCategory" },
+          { "name": "VerticalCategory" },
+          { "name": "EditorialCategory" }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "ContentRevisionUnion",
+        "possibleTypes": [
+          { "name": "Post" },
+          { "name": "Page" },
+          { "name": "GallerySingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "ThoughtLeaderSingle" },
+          { "name": "HollywoodExecProfileSingle" }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "MenuItemObjectUnion",
+        "possibleTypes": [
+          { "name": "Post" },
+          { "name": "Page" },
+          { "name": "GallerySingle" },
+          { "name": "ListSingle" },
+          { "name": "ExclusiveSingle" },
+          { "name": "VideoSingle" },
+          { "name": "HollywoodExecProfileSingle" },
+          { "name": "VipPostSingle" },
+          { "name": "VipVideoSingle" },
+          { "name": "VipReportSingle" },
+          { "name": "Category" },
+          { "name": "Tag" },
+          { "name": "GenreCategory" },
+          { "name": "VerticalCategory" },
+          { "name": "MenuItem" }
+        ]
+      }
+    ]
+  }
+}

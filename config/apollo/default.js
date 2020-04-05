@@ -1,7 +1,22 @@
 import gql from 'graphql-tag'
 
+import {
+  IntrospectionFragmentMatcher,
+  InMemoryCache,
+} from 'apollo-cache-inmemory'
+import introspectionQueryResultData from '../../fragmentTypes'
+
+const fragmentMatcher = new IntrospectionFragmentMatcher({
+  introspectionQueryResultData,
+})
+
+const cache = new InMemoryCache({ fragmentMatcher })
+
 export default function (ctx) {
   return {
+    cache,
+    // Does nuxt-apollo handle this automatically?
+    // ssrMode: true,
     httpEndpoint: process.env.WPGRAPHQL_HTTP_ENDPOINT,
     httpLinkOptions: {
       credentials: 'same-origin',
