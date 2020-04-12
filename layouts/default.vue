@@ -1,7 +1,9 @@
 <template>
-  <div>
+  <div class="min-h-screen flex flex-col">
     <OHeader />
-    <Nuxt />
+    <div class="flex-1">
+      <Nuxt />
+    </div>
     <OFooter />
   </div>
 </template>
