@@ -18,5 +18,12 @@ module.exports = {
   plugins: ['prettier'],
   rules: {
     'prettier/prettier': 'error',
+
+    /**
+     * All of the raw HTML being used should be from WordPress
+     * and therefore already sanitized. If this is ever not the
+     * case, consider turning this back on for awareness.
+     */
+    'vue/no-v-html': 'off'
   },
 }
