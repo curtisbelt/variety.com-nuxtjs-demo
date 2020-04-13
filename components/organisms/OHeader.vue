@@ -4,10 +4,10 @@
       class="container px-4 py-6 grid grid-cols-3 items-center uppercase tracking-widest"
     >
       <div class="justify-start grid grid-flow-col gap-3 items-center">
-        <button class="text-21px">
+        <button class="text-21px" aria-label="Main Menu">
           <AppIcon :icon="['fal', 'bars']" />
         </button>
-        <button class="text-21px">
+        <button class="text-21px" aria-label="Search for articles">
           <AppIcon :icon="['fal', 'search']" />
         </button>
         <nav class="row-span-2">
@@ -89,7 +89,10 @@
         </li>
         <li class="px-4">'<ALink to="/variety-about-us/">About Us</ALink>'</li>
         <li class="px-4">
-          '<ALink to="/video/the-two-popes-sistine-chapel/">Two Popes</ALink>'
+          '<ALink
+            to="/video/onward-to-the-next-pixar-film-does-this-one-have-sequel-potential/"
+            >Onward</ALink
+          >'
         </li>
         <li class="px-4">
           '<ALink to="/vip-marketing-page/">VIP Marketing</ALink>'

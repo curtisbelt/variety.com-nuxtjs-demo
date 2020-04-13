@@ -1,36 +1,90 @@
 <template>
-  <div
-    class="HomeTopStories // container lg:grid lg:grid-rows-3 lg:grid-flow-col lg:gap-4"
-  >
-    <div class="p-4 my-4 bg-brand-teal-200 lg:row-span-3 lg:col-span-2 lg:my-0">
-      In vel ultrices nisl
-    </div>
-    <div class="p-4 my-4 bg-brand-teal-200 lg:row-span-2 lg:col-span-1 lg:my-0">
-      In vel ultrices nisl
-    </div>
-    <div class="p-4 my-4 bg-brand-teal-200 lg:row-span-1 lg:col-span-1 lg:my-0">
-      In vel ultrices nisl
-    </div>
-  </div>
+  <OTopStories :stories="featuredArchive.nodes" />
 </template>
 
 <script>
-  // import gql from 'graphql-tag'
+  import gql from 'graphql-tag'
+  import OTopStories from '~/components/organisms/OTopStories'
 
   export default {
     name: 'HomeTopStories',
-    // apollo: {},
-
-    /*
-
-    carousel: vip-top-stories
-    limit: 3
-    taxonomy: false
-    filler post_type: variety_vip_post, variety_vip_report
-
-    taxonomy: pmc_carousel_modules
-
-
-    */
+    components: {
+      OTopStories,
+    },
+    apollo: {
+      featuredArchive: {
+        query: gql`
+          query getTopStories {
+            featuredArchive(
+              where: {
+                metaQuery: {
+                  relation: AND
+                  metaArray: [
+                    {
+                      key: "_pmc_tax"
+                      value: "pmc_carousel_modules"
+                      compare: EQUAL_TO
+                    }
+                    {
+                      key: "_pmc_term"
+                      value: "vy-homepage-top-stories"
+                      compare: EQUAL_TO
+                    }
+                  ]
+                }
+                orderby: { field: MENU_ORDER, order: ASC }
+              }
+            ) {
+              nodes {
+                title
+                excerpt
+                masterArticle {
+                  ... on VideoSingle {
+                    title
+                    dateGmt
+                    author {
+                      name
+                    }
+                    featuredImage {
+                      sourceUrl
+                    }
+                    verticalCategories {
+                      nodes {
+                        name
+                      }
+                    }
+                  }
+                  ... on Post {
+                    title
+                    dateGmt
+                    author {
+                      name
+                    }
+                    featuredImage {
+                      sourceUrl
+                    }
+                    verticalCategories {
+                      nodes {
+                        name
+                      }
+                    }
+                  }
+                  ... on VipReportSingle {
+                    title
+                    dateGmt
+                    author {
+                      name
+                    }
+                    featuredImage {
+                      sourceUrl
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `,
+      },
+    },
   }
 </script>
