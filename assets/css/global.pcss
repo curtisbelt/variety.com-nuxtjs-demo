@@ -1,5 +1,9 @@
 html {
   line-height: unset;
+
+  /* On one hand I hate a dead scrollbar, on the other hand
+    it makes layout shift left when scrollbear appears whenever it wants... */
+  overflow-y: scroll;
 }
 
 body {
@@ -7,3 +11,70 @@ body {
   @apply font-ibm-plex-sans mx-auto shadow-2xl;
 }
 
+/* Should upgrade @curtisbelt/tailwindcss-extras to use this */
+/*
+Note that traditionally this class would also have "width: 100%" as it doesn't fully work without setting a width.
+But for the video we need the width to actually be w-2/3 -- so it's best to only include style properties that are
+critical to fulfilling its purpose
+*/
+
+.aspect-ratio-9x5 {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 55.5555%;
+  }
+}
+
+.aspect-ratio-16x9 {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 56.25%;
+  }
+}
+
+.aspect-ratio-7x5 {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 71.4285%;
+  }
+}
+
+.aspect-ratio-4x3 {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 75%;
+  }
+}
+
+.aspect-ratio-5x4 {
+  position: relative;
+  &:before {
+    display: block;
+    content: '';
+    width: 100%;
+    padding-top: 80%;
+  }
+}
+
+
+
+
+
+/* .page-enter-active, .page-leave-active {
+  transition: opacity 100ms
+}
+.page-enter, .page-leave-active {
+  opacity: 0
+} */

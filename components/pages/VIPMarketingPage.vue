@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-      <div class="order-first md:order-none w-full md:w-2/3 aspect-ratio-16-9">
+      <div class="order-first md:order-none w-full md:w-2/3 aspect-ratio-16x9">
         <JWPlayer
           script="https://content.jwplatform.com/libraries/TbqO5K8A.js"
           :options="{
@@ -281,22 +281,6 @@
 </script>
 
 <style lang="postcss" scoped>
-  /* Should upgrade @curtisbelt/tailwindcss-extras to use this */
-  /*
-  Note that traditionally this class would also have "width: 100%" as it doesn't fully work without setting a width.
-  But for the video we need the width to actually be w-2/3 -- so it's best to only include style properties that are
-  critical to fulfilling its purpose
-  */
-  .aspect-ratio-16-9 {
-    position: relative;
-    &:before {
-      display: block;
-      content: '';
-      width: 100%;
-      padding-top: 56.25%;
-    }
-  }
-
   .grey-stripped-bg {
     background: url('~assets/images/grey-stripped-bg.png');
   }
