@@ -1,5 +1,5 @@
 <template>
-  <div class="MCard // bg-white shadow-card px-4 py-5 relative">
+  <div class="MCard // bg-white shadow-card-dark px-4 py-5 relative">
     <div
       v-if="$slots.ribbon"
       class="flex align-middle items-center p-4 sm:p-0 sm:absolute w-full left-0 right-0 top-0 -mt-3 z-20"
