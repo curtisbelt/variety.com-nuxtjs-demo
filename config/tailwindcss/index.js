@@ -62,13 +62,14 @@ module.exports = {
     extend: {
       colors: require('./colors'),
       boxShadow: {
-        card: '0 2px 4px 0 rgba(0,0,0,0.5)',
+        'card-dark': '0 2px 4px 0 rgba(0,0,0,0.5)',
+        'card-light': '0 1px 3px 0 rgba(0,0,0,0.15)',
       },
     },
   },
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
-    require('@curtisbelt/tailwindcss-extras'), // https://github.com/curtisbelt/tailwindcss-extras
+    // require('@curtisbelt/tailwindcss-extras'), // https://github.com/curtisbelt/tailwindcss-extras
   ],
 }
