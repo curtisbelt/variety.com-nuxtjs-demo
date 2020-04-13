@@ -1,10 +1,9 @@
 <template>
-  <div>
+  <div class="VideoSingle // container">
     <div v-if="$apollo.queries.nodeByUri.loading">Loading</div>
     <div v-else class="VideoSingle">
-      nodeByUri is {{ nodeByUri }}
-
       <img :src="nodeByUri.featuredImage.sourceUrl" />
+      <div v-html="nodeByUri.content" />
     </div>
   </div>
 </template>
