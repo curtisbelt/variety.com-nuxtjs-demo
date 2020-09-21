@@ -24,6 +24,6 @@ module.exports = {
      * and therefore already sanitized. If this is ever not the
      * case, consider turning this back on for awareness.
      */
-    'vue/no-v-html': 'off'
+    'vue/no-v-html': 'off',
   },
 }

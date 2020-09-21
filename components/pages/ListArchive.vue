@@ -1,7 +1,5 @@
 <template>
-  <div class="ListArchive">
-    ListArchive
-  </div>
+  <div class="ListArchive">ListArchive</div>
 </template>
 
 <script>

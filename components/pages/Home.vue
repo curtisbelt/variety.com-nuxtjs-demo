@@ -6,15 +6,11 @@
       </div>
       <div
         class="col-span-1 grid gap-4"
-        style="grid-template-rows: 250px 1fr 250px; min-width: 250px;"
+        style="grid-template-rows: 250px 1fr 250px; min-width: 250px"
       >
-        <div class="p-4 bg-white shadow row-auto">
-          Advertisement
-        </div>
+        <div class="p-4 bg-white shadow row-auto">Advertisement</div>
         <div class="p-4 bg-white shadow">Most Popular</div>
-        <div class="p-4 bg-white shadow row-auto">
-          Advertisement
-        </div>
+        <div class="p-4 bg-white shadow row-auto">Advertisement</div>
       </div>
     </div>
 

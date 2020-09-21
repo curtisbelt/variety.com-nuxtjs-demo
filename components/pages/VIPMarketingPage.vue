@@ -16,9 +16,7 @@
             professionals navigating the age of disruption.
           </div>
           <div class="my-3">
-            <AButton to="/">
-              Subscribe Now
-            </AButton>
+            <AButton to="/"> Subscribe Now </AButton>
           </div>
           <div class="my-3">
             <ALink
@@ -173,42 +171,32 @@
             >
               <div class="flex flex-col h-full">
                 <div class="font-bold flex-grow">
-                  <h3 class="text-24px tracking-wider uppercase">
-                    Annual
-                  </h3>
+                  <h3 class="text-24px tracking-wider uppercase">Annual</h3>
                   <p class="my-1 text-brand-red-500 text-24px">
                     $299.99 + 1 month free
                   </p>
                   <p class="m-2 text-18px uppercase">Save Over 50%</p>
                 </div>
                 <div>
-                  <AButton to="/">
-                    Get 1 month free
-                  </AButton>
+                  <AButton to="/"> Get 1 month free </AButton>
                 </div>
               </div>
             </MCard>
             <MCard
               class="my-3 sm:m-2 md:m-4 pb-6 sm:pb-12 w-full sm:w-full sm:order-first md:order-none md:w-1/3"
             >
-              <template #ribbon>
-                BEST OFFER
-              </template>
+              <template #ribbon> BEST OFFER </template>
 
               <div class="flex flex-col h-full">
                 <div class="font-bold flex-grow">
-                  <h3 class="text-24px tracking-wider uppercase">
-                    2 YEARS
-                  </h3>
+                  <h3 class="text-24px tracking-wider uppercase">2 YEARS</h3>
                   <p class="my-1 text-brand-red-500 text-24px">
                     $499.99 + 1 month free
                   </p>
                   <p class="m-2 text-18px uppercase">Save 60%</p>
                 </div>
                 <div>
-                  <AButton to="/">
-                    Get 1 month free
-                  </AButton>
+                  <AButton to="/"> Get 1 month free </AButton>
                 </div>
               </div>
             </MCard>
@@ -222,9 +210,7 @@
                   Corporate Subscription
                 </h3>
                 <div>
-                  <AButton to="/">
-                    Learn More
-                  </AButton>
+                  <AButton to="/"> Learn More </AButton>
                 </div>
               </div>
             </MCard>
@@ -236,9 +222,9 @@
 </template>
 
 <script>
+  import VIPPlusSVG from '@/assets/svg/VIPPlus.svg'
   import JWPlayer from '~/components/need-to-package/JWPlayer'
   import MCard from '~/components/molecules/MCard'
-  import VIPPlusSVG from '@/assets/svg/VIPPlus.svg'
 
   export default {
     name: 'VIPMarketingPage',

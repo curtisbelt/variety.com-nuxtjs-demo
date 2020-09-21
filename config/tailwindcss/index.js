@@ -4,6 +4,10 @@
  */
 
 module.exports = {
+  future: {
+    removeDeprecatedGapUtilities: true,
+    purgeLayersByDefault: true,
+  },
   prefix: '',
   important: false,
   separator: ':',
@@ -20,11 +24,11 @@ module.exports = {
     },
     borderWidth: {
       default: '1px',
-      '0': '0',
-      '2': '2px',
-      '3': '3px',
-      '4': '4px',
-      '6': '6px',
+      0: '0',
+      2: '2px',
+      3: '3px',
+      4: '4px',
+      6: '6px',
     },
     fontFamily: {
       'graphik-sans': [

@@ -1,7 +1,5 @@
 <template>
-  <div class="VideoArchive">
-    VideoArchive
-  </div>
+  <div class="VideoArchive">VideoArchive</div>
 </template>
 
 <script>

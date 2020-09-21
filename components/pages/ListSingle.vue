@@ -1,7 +1,5 @@
 <template>
-  <div class="ListSingle">
-    ListSingle
-  </div>
+  <div class="ListSingle">ListSingle</div>
 </template>
 
 <script>

@@ -1,7 +1,5 @@
 <template>
-  <div class="VerticalCategory">
-    VerticalCategory
-  </div>
+  <div class="VerticalCategory">VerticalCategory</div>
 </template>
 
 <script>

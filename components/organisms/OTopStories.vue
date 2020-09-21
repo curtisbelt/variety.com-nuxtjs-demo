@@ -3,7 +3,7 @@
     <!-- BEGIN 1 -->
     <APanel class="col-span-3">
       <div class="flex h-full -m-2">
-        <div class="m-2 aspect-ratio-4x3 flex-shrink-0" style="width: 57%;">
+        <div class="m-2 aspect-ratio-4x3 flex-shrink-0" style="width: 57%">
           <img
             class="absolute w-full h-full inset-0 object-cover"
             :src="stories[0].masterArticle.featuredImage.sourceUrl"
@@ -37,7 +37,7 @@
     <!-- BEGIN 2 -->
     <APanel class="col-span-2">
       <div class="flex h-full -m-2">
-        <div class="m-2 aspect-ratio-5x4 flex-shrink-0" style="width: 36%;">
+        <div class="m-2 aspect-ratio-5x4 flex-shrink-0" style="width: 36%">
           <img
             class="absolute w-full h-full inset-0 object-cover"
             :src="stories[1].masterArticle.featuredImage.sourceUrl"
@@ -82,7 +82,7 @@
     <!-- BEGIN 6 -->
     <APanel class="col-span-3">
       <div class="flex h-full -m-2">
-        <div class="m-2 aspect-ratio-9x5 flex-shrink-0" style="width: 42%;">
+        <div class="m-2 aspect-ratio-9x5 flex-shrink-0" style="width: 42%">
           <img
             class="absolute w-full h-full inset-0 object-cover"
             :src="stories[5].masterArticle.featuredImage.sourceUrl"

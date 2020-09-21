@@ -1,7 +1,5 @@
 <template>
-  <div class="EditorialCategory">
-    EditorialCategory
-  </div>
+  <div class="EditorialCategory">EditorialCategory</div>
 </template>
 
 <script>

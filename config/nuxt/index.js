@@ -28,7 +28,7 @@ export default {
     HEADER_MENU_LOCATION: process.env.HEADER_MENU_LOCATION,
   },
   modern: process.env.NODE_ENV === 'production',
-  modules: ['@nuxtjs/apollo'],
+  modules: [...(process.env.WPGRAPHQL_HTTP_ENDPOINT ? ['@nuxtjs/apollo'] : [])],
   plugins: [
     { src: '~plugins/font-awesome.js' },
     { src: '~plugins/globally-register-atom-components.js' },
@@ -46,7 +46,7 @@ export default {
   vue: { config: { productionTip: false } },
   render: { http2: { push: true } },
   watch: ['~/config/**/*'],
-  apollo,
+  ...(process.env.WPGRAPHQL_HTTP_ENDPOINT ? apollo : {}),
   build,
   features,
   head,

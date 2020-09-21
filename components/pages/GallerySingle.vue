@@ -1,7 +1,5 @@
 <template>
-  <div class="GallerySingle">
-    GallerySingle
-  </div>
+  <div class="GallerySingle">GallerySingle</div>
 </template>
 
 <script>
